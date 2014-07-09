@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
+  get "log_in" => "sessions#new", :as => "log_in"
+	resources :sessions
   get "sign_up" => "users#new", :as => "sign_up"
   # root :to => "users#new"
   resources :users
+  
+    get "log_out" => "sessions#destroy", :as => "log_out"
+   resources :sessions
+   
  
   match '/about',   to: 'static_pages#about',   via: 'get'
   match '/contact', to: 'static_pages#contact', via: 'get'
@@ -13,6 +19,7 @@ Rails.application.routes.draw do
    root 'static_pages#home'
    
    
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
