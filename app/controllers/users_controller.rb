@@ -2,15 +2,17 @@ class UsersController < ApplicationController
 	
 	
 	def new
- 	# @user = User.new
- 	@user = User.new(user_params)
+ 	 @user = User.new
+ 	#@user = User.new(user_params)
+ 
 	end
 	
 	
 
 	def create
-	  #@user = User.new(params[:user])
-	  @user = User.new(user_params)
+		params.permit!
+	  @user = User.new(params[:user])
+	  #@user = User.new(user_params)
  	 if @user.save
   	  redirect_to root_url, :notice => "Signed up!"
  	 else
@@ -19,7 +21,7 @@ class UsersController < ApplicationController
 	end
 	
 	def user_params
-		#params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
- 		params.permit(:user, :username, :email, :password, :salt, :encrypted_password)
+		params.require(:user).permit(:username, :email, :password, :salt, :encrypted_password)
+ 		#params.permit(:user, :username, :email, :password, :salt, :encrypted_password)
  	end
 end
