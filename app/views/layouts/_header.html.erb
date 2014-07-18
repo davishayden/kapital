@@ -1,16 +1,16 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<link href='http://fonts.googleapis.com/css?family=Rancho|Pacifico|Oxygen:700' rel='stylesheet' type='text/css'><header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Kapital Management", root_path, id: "logo" %>
+      <%= link_to "Advocate", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home",    root_path %></li>
+         <li><%= link_to "H",    root_path, id: "headerLinks" %></li> 
           
-          <li><%= link_to "Investments", '#' %></li>
+        <!--  <li><%= link_to "Investments", '#' %></li>  -->
           
-          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "A", about_path, id: "headerLinks" %></li> 
           
-          <li><%= link_to "Contact",    contact_path %></li>
+          <li><%= link_to "C",    contact_path, id: "headerLinks" %></li>
         </ul>
       </nav>
     </div>

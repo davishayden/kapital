@@ -40,7 +40,8 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-}
+  font-family: 'Pacifico', cursive;
+  }
 
 h2 {
   font-size: 1.2em;
@@ -50,6 +51,30 @@ h2 {
   font-weight: normal;
   color: $grayLight;
 }
+
+h3 {
+  font-size: 2em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  }
+  
+h4 {
+  font-size: 2em;
+  letter-spacing: -.5px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Oxygen', cursive;
+  }
+  
+  h5 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  }
 
 p {
   font-size: 1.1em;
@@ -69,10 +94,30 @@ p {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+
   &:hover {
     color: white;
     text-decoration: none;
   }
+  
+}
+
+#headerLinks {
+  float: left;
+  margin-right: 8px;
+  font-size: 1.4em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 12px;
+  font-weight: bold;
+  line-height: 1;
+  font-family: 'Pacifico', cursive;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
 }
 
 /* footer */
@@ -94,9 +139,15 @@ footer {
   ul {
     float: right;
     list-style: none;
+    
     li {
       float: left;
       margin-left: 10px;
+        font-size: 2.5em;
+  		letter-spacing: 1px;
+ 		 margin-bottom: 30px;
+ 		 text-align: center;
+ 		 font-family: 'Pacifico', cursive;
     }
   }
 }
